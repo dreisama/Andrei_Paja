@@ -1,0 +1,50 @@
+<html>
+    <head>
+	<title>Javascript Activity: Simple Interest Calculator</title>
+    <style>
+        h1 {
+            background-color: gray;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        body {
+            text-align: center;
+            font-size: 40px;
+            background-image: linear-gradient(black, white);
+            color: white;
+        }
+
+        button, p, input {
+            font-size: 40px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <script>
+            function calculateInterest()
+            {
+                amount = document.getElementById("amount").value;
+                rate = document.getElementById("rate").value;
+                years = document.getElementById("years").value;
+                result = document.getElementById("result");
+                
+                result.innerHTML = "The interest is " + (amount*rate*years/100);
+            }
+        </script>
+
+        <h1>Simple Interest Calculation</h1>
+
+        <label for="">Amount:</label><br>
+        <input id="amount"><br>
+        <label for="">Rate (Percentage):</label><br>
+        <input id="rate"><br>
+        <label for="">No. of Years:</label><br>
+        <input id="years"><br><br>
+
+        <button onclick="calculateInterest()">Calculate</button>
+
+        <p id="result"></p>
+    </body>
+</html>
