@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>FIRST NAME:</label><br>
+    <input type="text" id="fname"><br>
+    <label>LAST NAME:</label><br>
+    <input type="text" id="lname"><br>
+    <label>AGE:</label><br>
+    <input type="number" id="age"><br>
+    <label>GENDER:</label><br>
+    <input type="text" id="gender"><br>
+    <label>BIRTHDATE</label><br>
+    <input type="date" id="birthdate"><br>
+    <label>ADDRESS</label><br>
+    <input type="text" id="address"><br>
+    <label>EMAIL ADDRES</label><br>
+    <input type="text" id="email"><br><br>
+    <input type="submit" value="Submit" onclick="input()">
+
+    
+    <script>
+        // CREATE AN OBJECT THAT WILL DISPLAY THE DATA ENTERED BY THE USER IN THE FORM (FIRST NAME, LAST NAME, AGE, GENDER, BIRTHDATE, ADDRESS, EMAIL ADDRESS)
+        function input() {
+        const student = {
+            fname: document.getElementById("fname").value,
+            lname: document.getElementById("lname").value,
+            age: document.getElementById("age").value,
+            gender: document.getElementById("gender").value,
+            birthdate: document.getElementById("birthdate").value,
+            address: document.getElementById("address").value,
+            email: document.getElementById("email").value,
+
+        show: function () {
+            console.log('FIRST NAME: ' + this.fname);
+        },
+
+        show1: function () {
+            console.log('LAST NAME: ' + this.lname);
+        },
+
+        show2: function () {
+            console.log('AGE: ' + this.age);
+        },
+
+        show3: function () {
+            console.log('GENDER: ' + this.gender);
+        },
+
+        show4: function () {
+            console.log('BIRTHDATE: ' + this.birthdate);
+        },
+
+        show5: function () {
+            console.log('ADDRESS: ' + this.address);
+        },
+
+        show6: function () {
+            console.log('EMAIL: ' + this.email);
+        },
+    };
+
+    student.show();
+    student.show1();
+    student.show2();
+    student.show3();
+    student.show4();
+    student.show5();
+    student.show6();
+
+    
+}
+    </script>
+</body>
+</html>
