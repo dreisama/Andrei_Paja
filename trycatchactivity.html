@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const math = {
+
+            add: function (a,b) {
+                return a + b;
+            },
+
+            sub: function (a,b) {
+                return a - b;
+            },
+
+            multiply: function(a,b) {
+                return a * b;
+            },
+
+            divide: function(a,b) {
+                try {
+                    if (b === 0) {
+                        throw new Error("Division by zero is now allowed");
+                    }
+                    return a/b;
+                } catch(error) {
+                    console.log("Error: " + error.message);
+                }
+            },
+        };
+
+        console.log("Additon: " + math.add(10, 5));
+        console.log("Subtraction: " + math.sub(10, 2));
+        console.log("Multiplication: " + math.multiply(6,6));
+        console.log("Division: " + math.divide(50, 0))
+    </script>
+</body>
+</html>
